@@ -2,26 +2,24 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigation"
-    app:startDestination="@id/begudesFragment">
+    android:id="@+id/navegacio"
+    app:startDestination="@id/primerPlatFragment">
 
-    <fragment
-        android:id="@+id/begudesFragment"
-        android:name="com.jordel.menupractica.BegudesFragment"
-        android:label="fragment_begudes"
-        tools:layout="@layout/fragment_begudes" >
-        <action
-            android:id="@+id/action_begudesFragment_to_totalFragment"
-            app:destination="@id/totalFragment" />
-    </fragment>
     <fragment
         android:id="@+id/primerPlatFragment"
         android:name="com.jordel.menupractica.PrimerPlatFragment"
-        android:label="fragment_primer_plat"
-        tools:layout="@layout/fragment_primer_plat" >
+        android:label="PrimerPlatFragment" >
         <action
             android:id="@+id/action_primerPlatFragment_to_begudesFragment"
             app:destination="@id/begudesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/begudesFragment"
+        android:name="com.jordel.menupractica.BegudesFragment"
+        android:label="BegudesFragment" >
+        <action
+            android:id="@+id/action_begudesFragment_to_totalFragment"
+            app:destination="@id/totalFragment" />
     </fragment>
     <fragment
         android:id="@+id/totalFragment"

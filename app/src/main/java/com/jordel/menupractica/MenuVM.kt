@@ -12,7 +12,7 @@ class MenuVM : ViewModel() {
     val menu: LiveData<MenuModel> = _menu
 
     init {
-        _menu.value = MenuModel("plat", 0, 12.0, "beguda", 0, 5.0)
+        _menu.value = MenuModel("plat", 1, 12.0, "beguda", 1, 5.0)
     }
 
     fun updateMenuPrimerPlat(cantitatPlats: Int) {
@@ -26,6 +26,4 @@ class MenuVM : ViewModel() {
             cantitatVegudes = cantitatVegudes
         ) ?: MenuModel("plat", 0, 12.0, "beguda", cantitatVegudes, 5.0)
     }
-
-
 }
